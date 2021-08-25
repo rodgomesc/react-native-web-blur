@@ -15,16 +15,12 @@ const BlurView = ({
   reducedTransparencyFallbackColor,
   style,
   children,
-  ...rest
 }: BlurViewProps): JSX.Element => (
   <View
-    {...{
-      blurType,
-      blurAmount,
-      reducedTransparencyFallbackColor,
-      style: [style, { backdropFilter: `blur( 20.0px )` } as ViewStyle],
-      ...rest,
-    }}
+    // blurType={blurType}
+    // blurAmount={blurAmount}
+    // reducedTransparencyFallbackColor={reducedTransparencyFallbackColor}
+    style={[style, { backdropFilter: `blur( 20.0px )` } as ViewStyle]}
   >
     {children}
   </View>

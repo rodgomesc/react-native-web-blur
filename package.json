@@ -1,6 +1,6 @@
 {
   "name": "react-native-web-blur",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "React Native for Web implementation of @react-native-community/blur",
   "main": "dist/index.js",
   "main-es": "src/index.js",
@@ -19,9 +19,14 @@
     "react-native-web",
     "@react-native-community/blur"
   ],
+  "babel": {
+    "presets": [
+      "module:metro-react-native-babel-preset"
+    ]
+  },
   "scripts": {
     "watch": "babel --watch src --out-dir dist --extensions '.ts,.tsx'",
-    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx' && tsc --emitDeclarationOnly --outDir dist",
     "tsc": "tsc"
   },
   "devDependencies": {
@@ -37,6 +42,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-native-web": "^0.17.0",
+    "typescript": "^4.3.5",
     "webpack": "^3.6.0"
   },
   "peerDependencies": {
