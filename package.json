@@ -1,39 +1,39 @@
 {
-  "name": "react-native-web-name",
-  "version": "0.0.0",
-  "description": "React Native for Web implementation of {target module}",
-  "main": "src/index.js",
+  "name": "react-native-web-blur",
+  "version": "1.0",
+  "description": "React Native for Web implementation of @react-native-community/blur",
+  "main": "dist/index.js",
+  "main-es": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-native-web-community/react-native-web-name.git"
+    "url": "git@github.com:react-native-web-community/react-native-web-blur.git"
   },
   "author": {
-    "name": "{name}",
-    "email": "{email}",
-    "url": "{url}"
+    "name": "Rodrigo Gomes da Cunha",
+    "email": "rodgomesc@gmail.com",
+    "url": "https://github.com/rodgomesc"
   },
-  "license": "{license, don't forget to add a LICENSE file at the root of the project}",
+  "license": "MIT",
   "keywords": [
     "react-native",
     "react-native-web",
-    "{other keywords}"
+    "@react-native-community/blur"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "babel": {
-    "presets": [
-      "react-native"
-    ]
+    "watch": "babel --watch src --out-dir dist --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "tsc": "tsc"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-react-native": "^4.0.0",
-    "prettier": "^1.7.3",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-native-web": "^0.1.1",
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "babel-loader": "^8.2.2",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-native-web": "^0.17.0",
+    "@types/react-native": "^0.64.0",
     "webpack": "^3.6.0"
   },
   "peerDependencies": {
